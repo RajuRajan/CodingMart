@@ -1,0 +1,146 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style type="text/css">
+
+	.gif
+	{
+		margin-left: 300px;
+		margin-top: 100px;
+	}
+
+	.obs
+	{	
+		border-color: black;
+		
+		width:30px;
+
+		height: 30px;
+
+		margin-left: -300px;
+		margin-top:120px;
+		position: absolute;
+	}
+
+
+
+    .box{
+
+        width: 10px;
+
+        height: 10px;
+
+        position: absolute;
+
+        margin: 100px auto 0;
+
+        margin-left: 400px;
+
+        margin-top:280px;
+
+      
+    }
+
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<script type="text/javascript">
+	
+	var a=1;
+	var b=0;
+	var x=10;
+	var y=10;
+
+    
+
+
+$(document).keydown(function(e){
+
+    switch (e.which){
+
+    case 37:
+    		if(a==0)
+    		{   
+
+        $(".box").finish().animate({
+
+            left: "-=200"
+
+        });
+        a=1;
+        b=0;
+        x=10;
+        
+    }
+
+        break;
+
+   
+
+    case 39:  
+    if(b==0)
+    {  
+        $(".box").finish().animate({
+
+            left: "+=200"
+
+        });
+         a=0;
+        b=1;
+        x=20;
+       
+    }
+
+        break;
+
+    
+    }
+
+});
+	
+	
+$(document).ready(function(){
+     var m=1;
+$(".obs").animate({
+		
+    bottom:"280px",width:"70px",height: "70px",left:"700px",
+    }, 1000,function(){
+       
+
+     if(x == y)
+    {
+    	
+    	
+    	alert("lost");
+    
+    	
+    } 
+    else
+    {
+    	location.reload();
+    }
+});
+  
+
+
+});
+
+
+
+</script>
+
+</head>
+
+<body>
+    <p>CODINGMART ROUND 1 PROBLEM:</p>
+   
+ <div class="box"> <img src="index.png" height="65px" width="65px"/></div>  
+ 
+
+<img src="road.gif" class="gif" />
+ <img class="obs"src="12.png"/>
+
+</body>
+</html>
